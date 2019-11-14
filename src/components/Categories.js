@@ -25,7 +25,7 @@ class Categories extends Component {
               <Item
                 key={category.id}
                 item={category}
-                active={category.id === id ? 'active' : ''}
+                active={category.id === id && 'active'}
                 clickCategory={clickCategory}
               ></Item>
             );
