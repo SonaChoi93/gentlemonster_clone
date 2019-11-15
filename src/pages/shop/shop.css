@@ -1,0 +1,19 @@
+.wrapper_product_info {
+  display: inline-block;
+  width: 25%;
+  height: 100px;
+}
+.product_collection_image {
+  display: inline-block;
+  width: 50%;
+  height: 100px;
+  background-color: cornflowerblue;
+  vertical-align: top;
+}
+.wrapper_product {
+  padding: 0px 20px;
+}
+.product_image {
+  margin: 0.5px 0.5px;
+  background-color: aquamarine;
+}
