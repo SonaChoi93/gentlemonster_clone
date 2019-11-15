@@ -1,13 +1,11 @@
 .wrapper_product_info {
   display: inline-block;
   width: 25%;
-  height: 100px;
 }
 .product_collection_image {
   display: inline-block;
   width: 50%;
   height: 100px;
-  background-color: cornflowerblue;
   vertical-align: top;
 }
 .wrapper_product {
@@ -15,5 +13,30 @@
 }
 .product_image {
   margin: 0.5px 0.5px;
-  background-color: aquamarine;
+}
+.color_circle_item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 1px;
+  cursor: pointer;
+  display: block;
+}
+.color_circle {
+  display: inline-block;
+  border-radius: 50%;
+  margin: 1px;
+}
+.wrapper_color_circle {
+  float: right;
+  margin-right: 5px;
+}
+.color_circle.on {
+  border: 1px solid black;
+}
+.wrapper_product_info {
+  text-align: left;
+}
+.product_info {
+  display: inline-block;
 }

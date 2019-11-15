@@ -36,9 +36,8 @@ class CategoriesContainer extends Component {
           >
             KR
           </div>
-          <div
-            className={`wrapper_location_select_box ${this.state
-              .select_location && 'on'}`}
+          {/* <div
+            className={`wrapper_location_select_box ${this.state.select_location && 'on'}`}
           >
             <div className="location_select_box">
               <div className="">
@@ -50,7 +49,7 @@ class CategoriesContainer extends Component {
                 </select>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     );
