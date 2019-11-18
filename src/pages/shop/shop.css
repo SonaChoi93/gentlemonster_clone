@@ -69,3 +69,7 @@
   display: inline-block;
   margin-right: 5px;
 }
+.mini_product_image.active,
+.mini_product_image:hover {
+  outline: 1px solid #b1b1b1;
+}

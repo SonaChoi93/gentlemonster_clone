@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const products = [
   {
@@ -234,7 +234,7 @@ class ShopDetailContainer extends Component {
             <br />
             {product.colors.map((color, idx) => (
               // <a href="/">
-              <Link
+              <NavLink
                 to={
                   `/shop_detail?product_id=` +
                   product.id +
@@ -245,10 +245,13 @@ class ShopDetailContainer extends Component {
                 <img
                   key={idx}
                   alt="product_image"
-                  className="mini_product_image"
+                  className={
+                    `mini_product_image ` +
+                    `${color.name === item_color && 'active'}`
+                  }
                   src={color.image[0]}
                 />
-              </Link>
+              </NavLink>
             ))}
           </div>
           <div className="product_detail_add_btn">
