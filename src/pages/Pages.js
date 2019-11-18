@@ -4,6 +4,7 @@ import ShopContainer from './shop/ShopContainer';
 import StoreContainer from './store/StoreContainer';
 import StoreDetail from './store/StoreDetail';
 import ShopDetailContainer from './shop/ShopDetailContainer';
+import CartConatiner from './cart/CartConatiner';
 
 class Pages extends Component {
   render() {
@@ -15,6 +16,7 @@ class Pages extends Component {
           <Route path="/store/:store_id" exact component={StoreDetail} />
           <Route path="/store" exact component={StoreContainer} />
         </Switch>
+        <Route path="/cart" exact component={CartConatiner} />
       </div>
     );
   }

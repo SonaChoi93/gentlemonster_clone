@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { clickCategory } from '../store/modules/category';
 import { connect } from 'react-redux';
 import Categories from '../components/Categories';
+import { Link } from 'react-router-dom';
 
 class CategoriesContainer extends Component {
   state = {
@@ -26,6 +27,21 @@ class CategoriesContainer extends Component {
           id={id}
           clickCategory={clickCategory}
         />
+        <div className="sub_nav_section">
+          <ul className="sub_nav_item">
+            <li>
+              <Link
+                style={{ textDecoration: 'none' }}
+                to="/cart"
+                onClick={clickCategory}
+              >
+                <div className="cart_circle">
+                  <span className="cart_circle_num">0</span>
+                </div>
+              </Link>
+            </li>
+          </ul>
+          {/* </div>
         <div className="logo">
           <div
             onClick={() =>
@@ -36,6 +52,7 @@ class CategoriesContainer extends Component {
           >
             KR
           </div>
+          <Link to="/cart">cart </Link> */}
           {/* <div
             className={`wrapper_location_select_box ${this.state.select_location && 'on'}`}
           >

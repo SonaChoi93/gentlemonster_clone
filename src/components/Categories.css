@@ -5,7 +5,8 @@
   background-color: white;
   z-index: 999999;
 }
-.nav_item li {
+.nav_item li,
+.sub_nav_item li {
   display: inline-block;
   list-style: outside none none;
   margin-left: 20px;
@@ -100,4 +101,20 @@
 .menu_selectbox {
   position: relative;
   z-index: 10;
+}
+/* container */
+.sub_nav_section {
+  display: inline-block;
+}
+.cart_circle {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: black;
+}
+.cart_circle_num {
+  line-height: 23px;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
 }
