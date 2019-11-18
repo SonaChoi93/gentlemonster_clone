@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class ColorCircle extends Component {
   render() {
@@ -21,7 +22,6 @@ class ProductBox extends Component {
     current_color: this.props.product.colors[0].name,
     currnet_image: this.props.product.colors[0].image
   };
-
   render() {
     const changeItem = (name, image) => {
       this.setState({
@@ -30,16 +30,24 @@ class ProductBox extends Component {
       });
     };
     const { product } = this.props;
+    const { current_color } = this.state;
     return (
       <div className="wrapper_product_info">
         <div className="product_image">
-          <a href="/">
+          <Link
+            to={
+              `/shop_detail?product_id=` +
+              product.id +
+              `?color_name=` +
+              current_color
+            }
+          >
             <img
               alt="product_image"
               width="100%"
               src={this.state.currnet_image}
             />
-          </a>
+          </Link>
         </div>
         <div className="product_info_box">
           <div className="product_info">
@@ -47,8 +55,9 @@ class ProductBox extends Component {
             <div className="product_info">{this.state.current_color}</div>
           </div>
           <div className="wrapper_color_circle">
-            {product.colors.map(color => (
+            {product.colors.map((color, idx) => (
               <ColorCircle
+                key={idx}
                 color={color}
                 active={color.name === this.state.current_color}
                 changeItem={changeItem}

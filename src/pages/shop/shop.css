@@ -40,3 +40,32 @@
 .product_info {
   display: inline-block;
 }
+.product_detail_img_section,
+.product_detail_info_section {
+  width: calc(50% - 100px);
+  padding: 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+.wrapper_anchor {
+  display: inline-block;
+  position: fixed;
+  margin-left: -40px;
+}
+.wrapper_product_images {
+  display: inline-block;
+}
+.image_anchor {
+  width: 15px;
+  height: 15px;
+  border-radius: 50% 50%;
+  background: #b5b5b5;
+  cursor: pointer;
+  vertical-align: top;
+  margin-bottom: 15px;
+}
+.mini_product_image {
+  width: 60px;
+  display: inline-block;
+  margin-right: 5px;
+}

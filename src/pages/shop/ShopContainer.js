@@ -17,7 +17,9 @@ class ShopContainer extends Component {
         >
           {query.ca_id === '0' ? '선글라스' : '안경'}
         </div>
-        <ProductList />
+        <ProductList
+        // root_url={this.props.location.pathname + this.props.location.search}
+        />
       </div>
     );
   }

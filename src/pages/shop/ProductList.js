@@ -165,7 +165,11 @@ class ProductList extends Component {
       <div className="wrapper_product">
         <div className="product_collection_image">collection main image</div>
         {products.map(product => (
-          <ProductBox key={product.id} product={product} />
+          <ProductBox
+            key={product.id}
+            product={product}
+            root_url={this.props.root_url}
+          />
         ))}
       </div>
     );
