@@ -7,7 +7,7 @@ class ColorCircle extends Component {
     return (
       <div
         className={`color_circle  ${active && 'on'}`}
-        onMouseOver={() => changeItem(color.name, color.image[0])}
+        onMouseOver={() => changeItem(color.name, color.image)}
       >
         <span
           className="color_circle_item"
@@ -20,7 +20,7 @@ class ColorCircle extends Component {
 class ProductBox extends Component {
   state = {
     current_color: this.props.product.colors[0].name,
-    currnet_image: this.props.product.colors[0].image[0]
+    currnet_image: this.props.product.colors[0].image
   };
   render() {
     const changeItem = (name, image) => {
@@ -51,8 +51,9 @@ class ProductBox extends Component {
         </div>
         <div className="product_info_box">
           <div className="product_info">
-            <div className="product_info">{product.name}</div>
-            <div className="product_info">{this.state.current_color}</div>
+            <div className="product_info">
+              {product.name} {this.state.current_color}
+            </div>
           </div>
           <div className="wrapper_color_circle">
             {product.colors.map((color, idx) => (
@@ -64,8 +65,8 @@ class ProductBox extends Component {
               />
             ))}
           </div>
+          <div style={{ marginTop: '10px' }}>{product.price} 원</div>
         </div>
-        <div>{product.price} 원</div>
       </div>
     );
   }

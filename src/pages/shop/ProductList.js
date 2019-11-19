@@ -8,40 +8,20 @@ const products = [
       {
         color_code: '#C7C7C7',
         name: 'G1(1M)',
-        image: [
-          'https://www.gentlemonster.com/data/item/1544072768/JACKBYE_G11M_1_1.jpg',
-          'https://www.gentlemonster.com/data/item/1544072768/JACKBYE_G11M_2_2.jpg',
-          'https://www.gentlemonster.com/data/item/1544072768/JACKBYE_G11M_3_3.jpg',
-          'https://www.gentlemonster.com/data/item/1544072768/JACKBYE_G11M_4_4.jpg',
-          'https://www.gentlemonster.com/data/item/1544072768/JACKBYE_G11M_5_2.jpg',
-          'https://www.gentlemonster.com/data/item/1544072768/JACKBYE_G11M_6_2.jpg',
-          'https://www.gentlemonster.com//img/19/product/19_package.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1544072768/m_JACKBYE_G11M_1_1.jpg'
       },
       {
         color_code: '#333333',
         name: '01',
-        image: [
-          'https://www.gentlemonster.com/data/item/1540371434/JACKBYE_01_1.jpg',
-          'https://www.gentlemonster.com/data/item/1540371434/JACKBYE_01_2.jpg',
-          'https://www.gentlemonster.com/data/item/1540371434/JACKBYE_01_3.jpg',
-          'https://www.gentlemonster.com/data/item/1540371434/JACKBYE_01_4.jpg',
-          'https://www.gentlemonster.com/data/item/1540371434/JACKBYE_01_5_2.jpg',
-          'https://www.gentlemonster.com/data/item/1540371434/JACKBYE_01_6_2.jpg',
-          'https://www.gentlemonster.com/data/item/1540371434/JACKBYE_01_7_2.jpg',
-          'https://www.gentlemonster.com/data/item/1540371434/JACKBYE_01_8_2.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1540371434/m_JACKBYE_01_1.jpg'
       },
       {
         color_code: '#FF2928',
         name: 'WC1',
-        image: [
-          'https://www.gentlemonster.com/data/item/1544072746/JACKBYE_WC1_1_1.jpg',
-          'https://www.gentlemonster.com/data/item/1544072746/JACKBYE_WC1_2_2.jpg',
-          'https://www.gentlemonster.com/data/item/1544072746/JACKBYE_WC1_3_3.jpg',
-          'https://www.gentlemonster.com/data/item/1544072746/JACKBYE_WC1_4_4.jpg',
-          'https://www.gentlemonster.com/data/item/1544072746/JACKBYE_WC1_5_2.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1544072746/m_JACKBYE_WC1_1_1.jpg'
       }
     ],
     price: '249000',
@@ -55,58 +35,32 @@ const products = [
       {
         color_code: '#333333',
         name: '01',
-        image: [
-          'https://www.gentlemonster.com/data/item/1515116887/MERLYNN_01_1.jpg',
-          'https://www.gentlemonster.com/data/item/1515116887/MERLYNN_01_2.jpg',
-          'https://www.gentlemonster.com/data/item/1515116887/MERLYNN_01_3.jpg',
-          'https://www.gentlemonster.com/data/item/1515116887/MERLYNN_01_4.jpg',
-          'https://www.gentlemonster.com/data/item/1515116887/MERLYNN_01_5.jpg',
-          'https://www.gentlemonster.com/data/item/1515116887/MERLYNN_01_6.jpg',
-          'https://www.gentlemonster.com/data/item/1515116887/MERLYNN_01_7.jpg',
-          'https://www.gentlemonster.com/data/item/1515116887/MERLYNN_01_8.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1515116887/m_MERLYNN_01_1.jpg'
       },
       {
         color_code: '#876486',
         name: 'VC3',
-        image: [
-          'https://www.gentlemonster.com/data/item/1515116890/MERLYNN_VC3_1.jpg',
-          'https://www.gentlemonster.com/data/item/1515116890/MERLYNN_VC3_2.jpg',
-          'https://www.gentlemonster.com/data/item/1515116890/MERLYNN_VC3_3.jpg',
-          'https://www.gentlemonster.com/data/item/1515116890/MERLYNN_VC3_4.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1515116890/m_MERLYNN_VC3_1.jpg'
       },
       {
         color_code: '#F8EFDA',
         name: 'S3(1M)',
-        image: [
-          'https://www.gentlemonster.com/data/item/1515116889/MERLYNN_S3(1M)_1.jpg',
-          'https://www.gentlemonster.com/data/item/1515116889/MERLYNN_S3(1M)_2.jpg',
-          'https://www.gentlemonster.com/data/item/1515116889/MERLYNN_S3(1M)_3.jpg',
-          'https://www.gentlemonster.com/data/item/1515116889/MERLYNN_S3(1M)_4.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1515116889/m_MERLYNN_S3(1M)_1.jpg'
       },
       {
         color_code: '#FF2928',
         name: 'WC1',
-        image: [
-          'https://www.gentlemonster.com/data/item/1515116891/MERLYNN_WC1_1.jpg',
-          'https://www.gentlemonster.com/data/item/1515116891/MERLYNN_WC1_2.jpg',
-          'https://www.gentlemonster.com/data/item/1515116891/MERLYNN_WC1_3.jpg',
-          'https://www.gentlemonster.com/data/item/1515116891/MERLYNN_WC1_4.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1515116891/m_MERLYNN_WC1_1.jpg'
       },
       {
         color_code: '#C7C7C7',
         name: 'G1',
-        image: [
-          'https://www.gentlemonster.com/data/item/1515116888/MERLYNN_G1_1.jpg',
-          'https://www.gentlemonster.com/data/item/1515116888/MERLYNN_G1_2.jpg',
-          'https://www.gentlemonster.com/data/item/1515116888/MERLYNN_G1_3.jpg',
-          'https://www.gentlemonster.com/data/item/1515116888/MERLYNN_G1_4.jpg',
-          'https://www.gentlemonster.com/data/item/1515116888/MERLYNN_G1_5.jpg',
-          'https://www.gentlemonster.com/data/item/1515116888/MERLYNN_G1_6.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1515116888/m_MERLYNN_G1_1.jpg'
       }
     ],
     price: '260000',
@@ -120,48 +74,26 @@ const products = [
       {
         color_code: '#876486',
         name: 'VC3',
-        image: [
-          'https://www.gentlemonster.com/data/item/1553473261/MAMARS_VC3_1.jpg',
-          'https://www.gentlemonster.com/data/item/1553473261/MAMARS_VC3_2.jpg',
-          'https://www.gentlemonster.com/data/item/1553473261/MAMARS_VC3_3.jpg',
-          'https://www.gentlemonster.com/data/item/1553473261/MAMARS_VC3_4.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1553473261/m_MAMARS_VC3_1.jpg'
       },
       {
         color_code: '#333333',
         name: '01',
-        image: [
-          'https://www.gentlemonster.com/data/item/1529405922/MA_MARS_01_1.jpg',
-          'https://www.gentlemonster.com/data/item/1529405922/MA_MARS_01_2.jpg',
-          'https://www.gentlemonster.com/data/item/1529405922/MA_MARS_01_3.jpg',
-          'https://www.gentlemonster.com/data/item/1529405922/MA_MARS_01_4.jpg',
-          'https://www.gentlemonster.com/data/item/1529405922/MA_MARS_01_5.jpg',
-          'https://www.gentlemonster.com/data/item/1529405922/MA_MARS_01_6.jpg',
-          'https://www.gentlemonster.com/data/item/1529405922/MA_MARS_01_7.jpg',
-          'https://www.gentlemonster.com/data/item/1529405922/MA_MARS_01_8.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1529405922/m_MA_MARS_01_1.jpg'
       },
       {
         color_code: '#C7C7C7',
         name: 'G1',
-        image: [
-          'https://www.gentlemonster.com/data/item/1532937930/MA_MARS_G1_1.jpg',
-          'https://www.gentlemonster.com/data/item/1532937930/MA_MARS_G1_2.jpg',
-          'https://www.gentlemonster.com/data/item/1532937930/MA_MARS_G1_3.jpg',
-          'https://www.gentlemonster.com/data/item/1532937930/MA_MARS_G1_4.jpg',
-          'https://www.gentlemonster.com/data/item/1532937930/MA_MARS_G1_5.jpg',
-          'https://www.gentlemonster.com/data/item/1532937930/MA_MARS_G1_6.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1532937930/m_MA_MARS_G1_1.jpg'
       },
       {
         color_code: '#FF2928',
         name: 'WC1',
-        image: [
-          'https://www.gentlemonster.com/data/item/1515116886/MA_MARS_WC1_1.jpg',
-          'https://www.gentlemonster.com/data/item/1515116886/MA_MARS_WC1_2.jpg',
-          'https://www.gentlemonster.com/data/item/1515116886/MA_MARS_WC1_3.jpg',
-          'https://www.gentlemonster.com/data/item/1515116886/MA_MARS_WC1_4.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1515116886/m_MA_MARS_WC1_1.jpg'
       }
     ],
     price: '249000',
@@ -175,40 +107,20 @@ const products = [
       {
         color_code: '#333333',
         name: '01',
-        image: [
-          'https://www.gentlemonster.com/data/item/1540371489/SIXBEARS_01_1.jpg',
-          'https://www.gentlemonster.com/data/item/1540371489/SIXBEARS_01_2.jpg',
-          'https://www.gentlemonster.com/data/item/1540371489/SIXBEARS_01_3.jpg',
-          'https://www.gentlemonster.com/data/item/1540371489/SIXBEARS_01_4.jpg',
-          'https://www.gentlemonster.com/data/item/1540371489/SIXBEARS_01_5.jpg',
-          'https://www.gentlemonster.com/data/item/1540371489/SIXBEARS_01_6.jpg',
-          'https://www.gentlemonster.com/data/item/1540371489/SIXBEARS_01_7.jpg',
-          'https://www.gentlemonster.com/data/item/1540371489/SIXBEARS_01_8.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1540371489/m_SIXBEARS_01_1.jpg'
       },
       {
         color_code: '#7E8656',
         name: 'KC2',
-        image: [
-          'https://www.gentlemonster.com/data/item/1544078001/SIXBEARS_KC2_1_1.jpg',
-          'https://www.gentlemonster.com/data/item/1544078001/SIXBEARS_KC2_2_2.jpg',
-          'https://www.gentlemonster.com/data/item/1544078001/SIXBEARS_KC2_3_3.jpg',
-          'https://www.gentlemonster.com/data/item/1544078001/SIXBEARS_KC2_4_4.jpg',
-          'https://www.gentlemonster.com/data/item/1544078001/SIXBEARS_KC2_5_5.jpg',
-          'https://www.gentlemonster.com/data/item/1544078001/SIXBEARS_KC2_6_6.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1544078001/m_SIXBEARS_KC2_1_1.jpg'
       },
       {
         color_code: '#C7C7C7',
         name: 'G1(1M)',
-        image: [
-          'https://www.gentlemonster.com/data/item/1544077654/SIXBEARS_G1(1M)_1.jpg',
-          'https://www.gentlemonster.com/data/item/1544077654/SIXBEARS_G1(1M)_2.jpg',
-          'https://www.gentlemonster.com/data/item/1544077654/SIXBEARS_G1(1M)_3.jpg',
-          'https://www.gentlemonster.com/data/item/1544077654/SIXBEARS_G1(1M)_4.jpg',
-          'https://www.gentlemonster.com/data/item/1544077654/SIXBEARS_G1(1M)_5.jpg',
-          'https://www.gentlemonster.com/data/item/1544077654/SIXBEARS_G1(1M)_6.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1544077654/m_SIXBEARS_G1(1M)_1.jpg'
       }
     ],
     price: '259000',
@@ -222,38 +134,20 @@ const products = [
       {
         color_code: '#E49400',
         name: '033',
-        image: [
-          'https://www.gentlemonster.com/data/item/15524690718/CHAPSSAL_033_01.jpg',
-          'https://www.gentlemonster.com/data/item/15524690718/CHAPSSAL_033_02.jpg',
-          'https://www.gentlemonster.com/data/item/15524690718/CHAPSSAL_033_3.jpg',
-          'https://www.gentlemonster.com/data/item/15524690718/CHAPSSAL_033_4.jpg',
-          'https://www.gentlemonster.com/data/item/15524690718//CHAPSSAL_033_1.jpg',
-          'https://www.gentlemonster.com/data/item/15524690718/CHAPSSAL_033_2.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/15524690718/m_CHAPSSAL_033_01.jpg'
       },
       {
         color_code: '#333333',
         name: '01',
-        image: [
-          'https://www.gentlemonster.com/data/item/15524690688/CHAPSSAL_01_01.jpg',
-          'https://www.gentlemonster.com/data/item/15524690688/CHAPSSAL_01_02.jpg',
-          'https://www.gentlemonster.com/data/item/15524690688/CHAPSSAL_01_31.jpg',
-          'https://www.gentlemonster.com/data/item/15524690688/CHAPSSAL_01_4.jpg',
-          'https://www.gentlemonster.com/data/item/15524690688//CHAPSSAL_01_1.jpg',
-          'https://www.gentlemonster.com/data/item/15524690688/CHAPSSAL_01_2.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/15524690688/m_CHAPSSAL_01_01.jpg'
       },
       {
         color_code: '#E57A44',
         name: 'OR1',
-        image: [
-          'https://www.gentlemonster.com/data/item/15524690730/CHAPSSAL_OR1_01.jpg',
-          'https://www.gentlemonster.com/data/item/15524690730/CHAPSSAL_OR1_002.jpg',
-          'https://www.gentlemonster.com/data/item/15524690730/CHAPSSAL_OR1_3.jpg',
-          'https://www.gentlemonster.com/data/item/15524690730/CHAPSSAL_OR1_4.jpg',
-          'https://www.gentlemonster.com/data/item/15524690730//CHAPSSAL_OR1_1.jpg',
-          'https://www.gentlemonster.com/data/item/15524690730/CHAPSSAL_OR1_2.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/15524690730/m_CHAPSSAL_OR1_01.jpg'
       }
     ],
     price: '250000',
@@ -269,54 +163,32 @@ const products = [
         name: 'KC2',
         description:
           '파파스 KC2 은 FLATBA 디자인 중에서도 더 날렵해진 형태를 띱니다. 더 얇아진 다크 카키 아세테이트 프레임, 메탈 컷아웃 템플 팁 및 100% UV 차단이 되는 다크 카키 틴트 렌즈가 특징입니다.',
-        image: [
-          'https://www.gentlemonster.com/data/item/1515116906/PAPAS_KC2_1.jpg',
-          'https://www.gentlemonster.com/data/item/1515116906/PAPAS_KC2_2.jpg',
-          'https://www.gentlemonster.com/data/item/1515116906/PAPAS_KC2_3.jpg',
-          'https://www.gentlemonster.com/data/item/1515116906/PAPAS_KC2_4.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1515116906/m_PAPAS_KC2_1.jpg'
       },
       {
         color_code: '#EBD5C3',
         name: 'S1',
         description:
           '파파스 S1 은 FLATBA 디자인 중에서도 더 날렵해진 형태를 띱니다. 더 얇아진 투명 베이지 아세테이트 프레임, 메탈 컷아웃 템플 팁 및 100% UV 차단이 되는 투명 베이지 렌즈가 특징입니다.',
-        image: [
-          'https://www.gentlemonster.com/data/item/1515116907/PAPAS_S1_1.jpg',
-          'https://www.gentlemonster.com/data/item/1515116907/PAPAS_S1_2.jpg',
-          'https://www.gentlemonster.com/data/item/1515116907/PAPAS_S1_3.jpg',
-          'https://www.gentlemonster.com/data/item/1515116907/PAPAS_S1_4.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1515116907/m_PAPAS_S1_1.jpg'
       },
       {
         color_code: '#C7C7C7',
         name: 'G1(1M)',
         description:
           '파파스 G1(1M) 은 FLATBA 디자인 중에서도 더 날렵해진 형태를 띱니다. 더 얇아진 투명 그레이 아세테이트 프레임, 메탈 컷아웃 템플 팁 및 100% UV 차단이 되는 실버 미러 렌즈가 특징입니다.',
-        image: [
-          'https://www.gentlemonster.com/data/item/1515116905/PAPAS_G1(1M)_1.jpg',
-          'https://www.gentlemonster.com/data/item/1515116905/PAPAS_G1(1M)_2.jpg',
-          'https://www.gentlemonster.com/data/item/1515116905/PAPAS_G1(1M)_3.jpg',
-          'https://www.gentlemonster.com/data/item/1515116905/PAPAS_G1(1M)_4.jpg',
-          'https://www.gentlemonster.com/data/item/1515116905/PAPAS_G1(1M)_5.jpg',
-          'https://www.gentlemonster.com/data/item/1515116905/PAPAS_G1(1M)_6.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1515116905/m_PAPAS_G1(1M)_1.jpg'
       },
       {
         color_code: '#000000',
         name: '01',
         description:
           '파파스 01 은 FLATBA 디자인 중에서도 더 날렵해진 형태를 띱니다. 더 얇아진 블랙 아세테이트 프레임, 메탈 컷아웃 템플 팁 및 100% UV 차단이 되는 블랙 Zeiss 렌즈가 특징입니다.',
-        image: [
-          'https://www.gentlemonster.com/data/item/1515116904/PAPAS_01_1.jpg',
-          'https://www.gentlemonster.com/data/item/1515116904/PAPAS_01_2.jpg',
-          'https://www.gentlemonster.com/data/item/1515116904/PAPAS_01_3.jpg',
-          'https://www.gentlemonster.com/data/item/1515116904/PAPAS_01_4.jpg',
-          'https://www.gentlemonster.com/data/item/1515116904/PAPAS_01_5.jpg',
-          'https://www.gentlemonster.com/data/item/1515116904/PAPAS_01_6.jpg',
-          'https://www.gentlemonster.com/data/item/1515116904/PAPAS_01_7.jpg',
-          'https://www.gentlemonster.com/data/item/1515116904/PAPAS_01_8.jpg'
-        ]
+        image:
+          'https://www.gentlemonster.com/data/item/1515116904/m_PAPAS_01_1.jpg'
       }
     ],
     price: '249000'

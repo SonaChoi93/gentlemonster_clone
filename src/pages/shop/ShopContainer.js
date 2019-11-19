@@ -10,9 +10,10 @@ class ShopContainer extends Component {
       <div>
         <div
           style={{
-            backgroundColor: 'pink',
             textAlign: 'left',
-            padding: '20px'
+            padding: '20px',
+            fontWeight: 'bold',
+            fontSize: '18px'
           }}
         >
           {query.ca_id === '0' ? '선글라스' : '안경'}

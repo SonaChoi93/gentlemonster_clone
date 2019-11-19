@@ -9,7 +9,7 @@ class CategoriesContainer extends Component {
     select_location: false
   };
   render() {
-    const { id, clickCategory, categories } = this.props;
+    const { id, clickCategory, categories, carts } = this.props;
     return (
       <div className="nav_box">
         <div className="logo">
@@ -36,7 +36,7 @@ class CategoriesContainer extends Component {
                 onClick={clickCategory}
               >
                 <div className="cart_circle">
-                  <span className="cart_circle_num">0</span>
+                  <span className="cart_circle_num">{carts.length}</span>
                 </div>
               </Link>
             </li>
@@ -75,7 +75,8 @@ class CategoriesContainer extends Component {
 
 const mapStateToProps = state => ({
   id: state.category.id,
-  categories: state.category.categories
+  categories: state.category.categories,
+  carts: state.cart.carts
 });
 
 const mapDispatchToProps = dispatch => ({

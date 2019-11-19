@@ -1,4 +1,18 @@
 .cart_product_table {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  width: 100%;
+  text-align: left;
+  vertical-align: top;
+}
+.cart_product_table td {
+  padding: 15px 10px;
+}
+.cart_product_table tr {
+  vertical-align: top;
+}
+.btn_mini_delete {
+  font-size: 9px;
+  text-decoration: underline;
+  cursor: pointer;
 }

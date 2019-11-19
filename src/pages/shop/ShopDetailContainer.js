@@ -338,7 +338,7 @@ class ShopDetailContainer extends Component {
     const { addCart } = this.props;
     return (
       <div>
-        <div className="product_detail_img_section">
+        <div className="product_detail_section image">
           <div className="wrapper_anchor">
             <a href="#image_0">
               <div className="image_anchor" />
@@ -365,7 +365,7 @@ class ShopDetailContainer extends Component {
             ))}
           </div>
         </div>
-        <div className="product_detail_info_section">
+        <div className="product_detail_section info">
           <div className="product_detail_name">
             {product.name} {product.color.name}
           </div>
@@ -374,10 +374,10 @@ class ShopDetailContainer extends Component {
             {product.description}
           </div>
           <div className="wrapper_product_colors">
-            Color ({product.colors.length})
-            <br />
+            <div style={{ marginBottom: '10px' }}>
+              Color ({product.colors.length})
+            </div>
             {product.colors.map((color, idx) => (
-              // <a href="/">
               <NavLink
                 key={idx}
                 to={
@@ -400,7 +400,9 @@ class ShopDetailContainer extends Component {
             ))}
           </div>
           <div className="product_detail_add_btn">
-            <button onClick={() => addCart(product)}>장바구니 담기</button>
+            <div className="btn_style_black" onClick={() => addCart(product)}>
+              장바구니 담기
+            </div>
           </div>
           <div className="wrapper_product_detail_etc">
             <div className="product_detail_etc"></div>
