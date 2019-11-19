@@ -12,7 +12,6 @@ class CartConatiner extends Component {
         <table className="cart_product_table">
           {carts.map(cart => (
             <tr key={cart.number}>
-              {console.log(cart)}
               <td>
                 <Link
                   to={

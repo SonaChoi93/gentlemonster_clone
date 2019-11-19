@@ -7,7 +7,7 @@ class ColorCircle extends Component {
     return (
       <div
         className={`color_circle  ${active && 'on'}`}
-        onMouseOver={() => changeItem(color.name, color.image)}
+        onMouseOver={() => changeItem(color.name, color.image[0])}
       >
         <span
           className="color_circle_item"
@@ -20,7 +20,7 @@ class ColorCircle extends Component {
 class ProductBox extends Component {
   state = {
     current_color: this.props.product.colors[0].name,
-    currnet_image: this.props.product.colors[0].image
+    currnet_image: this.props.product.colors[0].image[0]
   };
   render() {
     const changeItem = (name, image) => {
