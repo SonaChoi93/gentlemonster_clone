@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { addCart } from '../../store/modules/cart';
+import { connect } from 'react-redux';
 
 const products = [
   {
@@ -191,7 +193,7 @@ class ShopDetailContainer extends Component {
     product.color = product.colors.filter(
       color => color.name === item_color
     )[0];
-
+    const { addCart } = this.props;
     return (
       <div>
         <div className="product_detail_img_section">
@@ -235,6 +237,7 @@ class ShopDetailContainer extends Component {
             {product.colors.map((color, idx) => (
               // <a href="/">
               <NavLink
+                key={idx}
                 to={
                   `/shop_detail?product_id=` +
                   product.id +
@@ -255,7 +258,7 @@ class ShopDetailContainer extends Component {
             ))}
           </div>
           <div className="product_detail_add_btn">
-            <button>장바구니 담기</button>
+            <button onClick={() => addCart(product)}>장바구니 담기</button>
           </div>
           <div className="wrapper_product_detail_etc">
             <div className="product_detail_etc"></div>
@@ -268,4 +271,14 @@ class ShopDetailContainer extends Component {
   }
 }
 
-export default ShopDetailContainer;
+const mapStateToProps = state => ({
+  carts: state.cart.carts
+});
+
+const mapDispatchToProps = dispatch => ({
+  addCart: data => dispatch(addCart(data))
+});
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ShopDetailContainer);

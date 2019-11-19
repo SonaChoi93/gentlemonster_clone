@@ -1,57 +1,42 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './cart.css';
-
-const carts = [
-  {
-    image:
-      'https://www.gentlemonster.com/data/item/1544072768/m_JACKBYE_G11M_1_1.jpg',
-    name: '잭바이',
-    color_name: 'G1(1M)',
-    price: '249000',
-    count: 1,
-    product_id: 1
-  },
-  {
-    image:
-      'https://www.gentlemonster.com/data/item/1540371434/m_JACKBYE_01_1.jpg',
-    name: '잭바이',
-    color_name: '01',
-    price: '249000',
-    count: 1,
-    product_id: 1
-  }
-];
+import { connect } from 'react-redux';
 class CartConatiner extends Component {
   render() {
+    const { carts } = this.props;
     return (
       <div>
         <div>카트</div>
         <table className="cart_product_table">
-          {carts.map((cart, idx) => (
-            <tr key={idx}>
+          {carts.map(cart => (
+            <tr key={cart.number}>
+              {console.log(cart)}
               <td>
                 <Link
                   to={
                     `/shop_detail?product_id=` +
-                    cart.product_id +
+                    cart.id +
                     `?color_name=` +
-                    cart.color_name
+                    cart.color.name
                   }
                 >
                   <img
-                    key={idx}
+                    key={cart.number}
                     alt="product_image"
                     width="80px"
-                    src={cart.image}
+                    src={cart.color.image[0]}
                   />
                 </Link>
               </td>
               <td>
-                <div>{cart.name + ' ' + cart.color_name}</div>
+                <div>
+                  <div>{cart.name + ' ' + cart.color.name}</div>
+                  <div>가격 : {cart.price} 원</div>
+                </div>
               </td>
               <td>수량 : {cart.count}</td>
-              <td>합계 : {cart.price} 원</td>
+              <td>합계 : {cart.price * cart.count} 원</td>
             </tr>
           ))}
         </table>
@@ -61,4 +46,7 @@ class CartConatiner extends Component {
   }
 }
 
-export default CartConatiner;
+const mapStateToProps = state => ({
+  carts: state.cart.carts
+});
+export default connect(mapStateToProps)(CartConatiner);
