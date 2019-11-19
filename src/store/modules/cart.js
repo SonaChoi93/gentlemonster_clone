@@ -3,7 +3,7 @@ const DELETE_CART = 'DELETE_CART';
 const DELETE_ALL = 'DELETE_ALL';
 
 export const addCart = data => ({ type: ADD_CART, data });
-export const deleteCard = id => ({ type: DELETE_CART, id });
+export const deleteCard = number => ({ type: DELETE_CART, number });
 export const deleteAll = () => ({ type: DELETE_ALL });
 
 const initialState = {
@@ -23,6 +23,11 @@ export default function cart(state = initialState, action) {
           ...action.data
         }),
         number: state.number + 1
+      };
+    case DELETE_CART:
+      return {
+        ...state,
+        carts: state.carts.filter(cart => cart.number !== action.number)
       };
 
     default:

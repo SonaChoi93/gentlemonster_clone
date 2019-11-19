@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './cart.css';
 import { connect } from 'react-redux';
+import { deleteCard } from '../../store/modules/cart';
 class CartConatiner extends Component {
   render() {
-    const { carts } = this.props;
+    const { carts, deleteCard } = this.props;
     return (
       <div>
         <div>카트</div>
@@ -33,6 +34,7 @@ class CartConatiner extends Component {
                 <div>
                   <div>{cart.name + ' ' + cart.color.name}</div>
                   <div>가격 : {cart.price} 원</div>
+                  <button onClick={() => deleteCard(cart.number)}>삭제</button>
                 </div>
               </td>
               <td>수량 : {cart.count}</td>
@@ -49,4 +51,7 @@ class CartConatiner extends Component {
 const mapStateToProps = state => ({
   carts: state.cart.carts
 });
-export default connect(mapStateToProps)(CartConatiner);
+const mapDispatchToProps = dispatch => ({
+  deleteCard: number => dispatch(deleteCard(number))
+});
+export default connect(mapStateToProps, mapDispatchToProps)(CartConatiner);
