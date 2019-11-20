@@ -10,9 +10,21 @@
 }
 .cart_product_table tr {
   vertical-align: top;
+  height: 100px;
 }
 .btn_mini_delete {
   font-size: 9px;
-  text-decoration: underline;
+  border-bottom: 1px solid black;
   cursor: pointer;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+}
+.btn_mini_delete.large {
+  font-size: 13px;
+  padding-bottom: 5px;
+  margin: 5px;
+}
+.cart_product_table tr {
+  border-bottom: 1pt solid black;
 }

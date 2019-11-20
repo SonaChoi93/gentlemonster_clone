@@ -29,7 +29,12 @@ export default function cart(state = initialState, action) {
         ...state,
         carts: state.carts.filter(cart => cart.number !== action.number)
       };
-
+    case DELETE_ALL:
+      return {
+        carts: [],
+        count: 1,
+        number: 0
+      };
     default:
       return state;
   }

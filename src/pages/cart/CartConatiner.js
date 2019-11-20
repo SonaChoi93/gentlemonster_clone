@@ -1,66 +1,47 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './cart.css';
 import { connect } from 'react-redux';
-import { deleteCard } from '../../store/modules/cart';
+import { deleteCard, deleteAll } from '../../store/modules/cart';
+import CartComponent from './CartComponent';
+import { Link } from 'react-router-dom';
 class CartConatiner extends Component {
   render() {
-    const { carts, deleteCard } = this.props;
+    const { carts, deleteCard, deleteAll } = this.props;
     return (
       <div
         style={{
           padding: '150px 50px 50px',
           fontSize: '12px',
-          maxWidth: '700px'
+          maxWidth: '700px',
+          margin: 'auto'
         }}
       >
         <div
-          style={{ fontSize: '14px', textAlign: 'left', paddingBottom: '30px' }}
+          style={{
+            fontSize: '14px',
+            textAlign: 'left',
+            paddingBottom: '30px'
+          }}
         >
           카트
         </div>
-        <table className="cart_product_table">
-          {carts.map(cart => (
-            <tr key={cart.number}>
-              <td>
-                <Link
-                  to={
-                    `/shop_detail?product_id=` +
-                    cart.id +
-                    `?color_name=` +
-                    cart.color.name
-                  }
-                >
-                  <img
-                    key={cart.number}
-                    alt="product_image"
-                    width="80px"
-                    src={cart.color.image[0]}
-                  />
-                </Link>
-              </td>
-              <td>
-                <div>
-                  <div>{cart.name + ' ' + cart.color.name}</div>
-                  <div style={{ fontSize: '9px', marginBottom: '20px' }}>
-                    가격 : {cart.price} 원
-                  </div>
-                  <div
-                    className="btn_mini_delete"
-                    onClick={() => deleteCard(cart.number)}
-                  >
-                    삭제
-                  </div>
-                </div>
-              </td>
-              <td>수량 : {cart.count}</td>
-              <td style={{ fontWeight: 'bold' }}>
-                합계 : {cart.price * cart.count} 원
-              </td>
-            </tr>
-          ))}
-        </table>
-        
+        {carts.length !== 0 ? (
+          <CartComponent carts={carts} deleteCard={deleteCard} />
+        ) : (
+          <table className="cart_product_table">
+            <tr>카드에 담긴 제품이 없습니다.</tr>
+          </table>
+        )}
+        {carts.length !== 0 && (
+          <div style={{ textAlign: 'left' }}>
+            <Link className="btn_mini_delete large" to="shop?ca_id=0">
+              쇼핑 계속하기
+            </Link>
+            <div className="btn_mini_delete large" onClick={deleteAll}>
+              쇼핑백 비우기
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -70,6 +51,7 @@ const mapStateToProps = state => ({
   carts: state.cart.carts
 });
 const mapDispatchToProps = dispatch => ({
-  deleteCard: number => dispatch(deleteCard(number))
+  deleteCard: number => dispatch(deleteCard(number)),
+  deleteAll: () => dispatch(deleteAll())
 });
 export default connect(mapStateToProps, mapDispatchToProps)(CartConatiner);
