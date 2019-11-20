@@ -41,6 +41,42 @@ class CategoriesContainer extends Component {
               </Link>
             </li>
           </ul>
+          {/* <div className="cart_circle">
+            <span className="cart_circle_num">{carts.length}</span>
+          </div> */}
+          <div className="cart_section_popup_inner">
+            <p className="cart_group_title font_title">카트</p>
+            <div>
+              {carts.length === 0 ? (
+                '카트에 담긴 제품이 없습니다'
+              ) : (
+                <table>
+                  {carts.map(cart => (
+                    <tr key={cart.number}>
+                      <td style={{ height: '80px' }}>
+                        <img
+                          alt={cart.color.name}
+                          src={cart.color.image[0]}
+                          style={{ height: '60px' }}
+                        />
+                      </td>
+                      <td>
+                        <div>
+                          {cart.name} {cart.color.name}
+                        </div>
+                        <div>Qty : {cart.count}</div>
+                      </td>
+                      <td>{cart.price * cart.count} 원</td>
+                    </tr>
+                  ))}
+                  <tr>
+                    <td colSpa="3">소계</td>
+                  </tr>
+                </table>
+              )}
+            </div>
+            <div>카트 자세히 보기</div>
+          </div>
           {/* </div>
         <div className="logo">
           <div
