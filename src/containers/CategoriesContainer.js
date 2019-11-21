@@ -6,8 +6,10 @@ import { Link } from 'react-router-dom';
 
 class CategoriesContainer extends Component {
   state = {
-    select_location: false
+    select_location: false,
+    show_cart: false
   };
+
   render() {
     const { id, clickCategory, categories, carts } = this.props;
     return (
@@ -30,21 +32,31 @@ class CategoriesContainer extends Component {
         <div className="sub_nav_section">
           <ul className="sub_nav_item">
             <li>
-              <Link
+              <div
                 style={{ textDecoration: 'none' }}
                 to="/cart"
                 onClick={clickCategory}
               >
-                <div className="cart_circle">
+                <div
+                  className="cart_circle"
+                  onClick={() =>
+                    this.setState({
+                      show_cart: !this.state.show_cart
+                    })
+                  }
+                >
                   <span className="cart_circle_num">{carts.length}</span>
                 </div>
-              </Link>
+              </div>
             </li>
           </ul>
           {/* <div className="cart_circle">
             <span className="cart_circle_num">{carts.length}</span>
           </div> */}
-          <div className="cart_section_popup_inner">
+          <div
+            className={`cart_section_popup_inner ${this.state.show_cart &&
+              'on'}`}
+          >
             <p className="cart_group_title font_title">카트</p>
             <div>
               {carts.length === 0 ? (
@@ -75,7 +87,7 @@ class CategoriesContainer extends Component {
                 </table>
               )}
             </div>
-            <div>카트 자세히 보기</div>
+            <div className="btn_style_white">카트 자세히 보기</div>
           </div>
           {/* </div>
         <div className="logo">

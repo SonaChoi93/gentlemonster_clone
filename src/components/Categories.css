@@ -130,6 +130,10 @@
   position: fixed;
   right: 20px;
   top: 60px;
+  display: none;
+}
+.cart_section_popup_inner.on {
+  display: block;
 }
 .cart_group_title.font_title {
   /* font-family: "GM_C", "Noto Sans", Helvetica, Arial, sans-serif !important; */
@@ -137,4 +141,16 @@
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+.btn_style_white {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background: #fff;
+  color: #000;
+  font-size: 13px;
+  border: 1px solid #000;
+  border-radius: 8px 8px;
+  text-align: center;
+  cursor: pointer;
 }
