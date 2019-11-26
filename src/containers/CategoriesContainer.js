@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
-import { clickCategory } from '../store/modules/category';
+import { clickCategory, clickCart } from '../store/modules/category';
 import { connect } from 'react-redux';
 import Categories from '../components/Categories';
 import { Link } from 'react-router-dom';
 
 class CategoriesContainer extends Component {
   state = {
-    select_location: false,
-    show_cart: false
+    select_location: false
   };
 
   render() {
-    const { id, clickCategory, categories, carts } = this.props;
+    const {
+      id,
+      clickCategory,
+      categories,
+      carts,
+      show_cart,
+      clickCart
+    } = this.props;
     return (
       <div className="nav_box">
         <div className="logo">
@@ -39,11 +45,10 @@ class CategoriesContainer extends Component {
               >
                 <div
                   className="cart_circle"
-                  onClick={() =>
-                    this.setState({
-                      show_cart: !this.state.show_cart
-                    })
-                  }
+                  onClick={e => {
+                    e.stopPropagation();
+                    clickCart();
+                  }}
                 >
                   <span className="cart_circle_num">{carts.length}</span>
                 </div>
@@ -53,10 +58,7 @@ class CategoriesContainer extends Component {
           {/* <div className="cart_circle">
             <span className="cart_circle_num">{carts.length}</span>
           </div> */}
-          <div
-            className={`cart_section_popup_inner ${this.state.show_cart &&
-              'on'}`}
-          >
+          <div className={`cart_section_popup_inner ${show_cart && 'on'}`}>
             <p className="cart_group_title font_title">카트</p>
             <div>
               {carts.length === 0 ? (
@@ -87,7 +89,13 @@ class CategoriesContainer extends Component {
                 </table>
               )}
             </div>
-            <div className="btn_style_white">카트 자세히 보기</div>
+            <Link
+              to="/cart"
+              className="btn_style_white"
+              style={{ textDecoration: 'none' }}
+            >
+              카트 자세히 보기
+            </Link>
           </div>
           {/* </div>
         <div className="logo">
@@ -124,11 +132,13 @@ class CategoriesContainer extends Component {
 const mapStateToProps = state => ({
   id: state.category.id,
   categories: state.category.categories,
-  carts: state.cart.carts
+  carts: state.cart.carts,
+  show_cart: state.category.cart
 });
 
 const mapDispatchToProps = dispatch => ({
-  clickCategory: id => dispatch(clickCategory(id))
+  clickCategory: id => dispatch(clickCategory(id)),
+  clickCart: () => dispatch(clickCart())
 });
 export default connect(
   mapStateToProps,

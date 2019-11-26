@@ -1,10 +1,12 @@
 const CLICK_CATEGORY = 'CLICK_CATEGORY';
 const CLICK_LOGO = 'CLICK_LOGO';
 const CLICK_LOGIN = 'CLICK_LOGIN';
+const CLICK_CART = 'CLICK_CART';
 
 export const clickCategory = id => ({ type: CLICK_CATEGORY, id });
 export const clickLogo = () => ({ type: CLICK_LOGO });
 export const clickLogin = () => ({ type: CLICK_LOGIN });
+export const clickCart = () => ({ type: CLICK_CART });
 
 const categories = [
   { id: '1', name: '선글라스', active: false, path: '/shop?ca_id=0' },
@@ -17,7 +19,8 @@ const categories = [
 const initialState = {
   admin: 0,
   id: 0,
-  categories
+  categories,
+  cart: false
 };
 
 export default function category(state = initialState, action) {
@@ -26,6 +29,7 @@ export default function category(state = initialState, action) {
       return {
         ...state,
         id: action.id,
+        cart: false,
         categories: categories.map(category => {
           if (category.id === action.id) {
             return {
@@ -36,7 +40,11 @@ export default function category(state = initialState, action) {
           return category;
         })
       };
-
+    case CLICK_CART:
+      return {
+        ...state,
+        cart: !state.cart
+      };
     default:
       return state;
   }
