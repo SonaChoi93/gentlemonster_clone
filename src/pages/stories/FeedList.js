@@ -27,10 +27,10 @@ class FeedList extends Component {
             key={feed.id}
             style={{
               float: "left",
-              height: "450px",
-              width: "31%",
+              height: "500px",
+              width: "30%",
               margin: "0 0 50px 0",
-              padding: "11px"
+              padding: "0px 1.666666666666667%"
             }}
           >
             <Link to={`${url}/${feed.id}`} style={{ textDecoration: "none" }}>
@@ -78,6 +78,9 @@ class FeedList extends Component {
                   }}
                 >
                   <div>스토리 보기</div>
+                  <div
+                    style={{ clear: "both", content: "", dispaly: "table" }}
+                  ></div>
                 </Link>
               </div>
             </div>
