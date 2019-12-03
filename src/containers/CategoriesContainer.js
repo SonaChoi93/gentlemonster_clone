@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { clickCategory } from '../store/modules/category';
+import { clickCategory, clickCart } from '../store/modules/category';
 import { connect } from 'react-redux';
 import Categories from '../components/Categories';
 import { Link } from 'react-router-dom';
@@ -8,8 +8,16 @@ class CategoriesContainer extends Component {
   state = {
     select_location: false
   };
+
   render() {
-    const { id, clickCategory, categories, carts } = this.props;
+    const {
+      id,
+      clickCategory,
+      categories,
+      carts,
+      show_cart,
+      clickCart
+    } = this.props;
     return (
       <div className="nav_box">
         <div className="logo">
@@ -30,17 +38,65 @@ class CategoriesContainer extends Component {
         <div className="sub_nav_section">
           <ul className="sub_nav_item">
             <li>
-              <Link
+              <div
                 style={{ textDecoration: 'none' }}
                 to="/cart"
                 onClick={clickCategory}
               >
-                <div className="cart_circle">
+                <div
+                  className="cart_circle"
+                  onClick={e => {
+                    e.stopPropagation();
+                    clickCart();
+                  }}
+                >
                   <span className="cart_circle_num">{carts.length}</span>
                 </div>
-              </Link>
+              </div>
             </li>
           </ul>
+          {/* <div className="cart_circle">
+            <span className="cart_circle_num">{carts.length}</span>
+          </div> */}
+          <div className={`cart_section_popup_inner ${show_cart && 'on'}`}>
+            <p className="cart_group_title font_title">카트</p>
+            <div>
+              {carts.length === 0 ? (
+                '카트에 담긴 제품이 없습니다'
+              ) : (
+                <table>
+                  {carts.map(cart => (
+                    <tr key={cart.number}>
+                      <td style={{ height: '80px' }}>
+                        <img
+                          alt={cart.color.name}
+                          src={cart.color.image[0]}
+                          style={{ height: '60px' }}
+                        />
+                      </td>
+                      <td>
+                        <div>
+                          {cart.name} {cart.color.name}
+                        </div>
+                        <div>Qty : {cart.count}</div>
+                      </td>
+                      <td>{cart.price * cart.count} 원</td>
+                    </tr>
+                  ))}
+                  <tr>
+                    <td colSpa="3">소계</td>
+                  </tr>
+                </table>
+              )}
+            </div>
+            <Link
+              to="/cart"
+              className="btn_style_white"
+              style={{ textDecoration: 'none' }}
+            >
+              카트 자세히 보기
+            </Link>
+          </div>
           {/* </div>
         <div className="logo">
           <div
@@ -76,11 +132,13 @@ class CategoriesContainer extends Component {
 const mapStateToProps = state => ({
   id: state.category.id,
   categories: state.category.categories,
-  carts: state.cart.carts
+  carts: state.cart.carts,
+  show_cart: state.category.cart
 });
 
 const mapDispatchToProps = dispatch => ({
-  clickCategory: id => dispatch(clickCategory(id))
+  clickCategory: id => dispatch(clickCategory(id)),
+  clickCart: () => dispatch(clickCart())
 });
 export default connect(
   mapStateToProps,
