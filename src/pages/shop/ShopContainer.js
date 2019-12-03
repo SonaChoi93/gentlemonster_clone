@@ -18,7 +18,7 @@ class ShopContainer extends Component {
           {query === '0' ? '선글라스' : '안경'}
         </div>
         <ProductList
-        // root_url={this.props.location.pathname + this.props.location.search}
+          root_url={this.props.location.pathname + this.props.location.search}
         />
       </div>
     );
