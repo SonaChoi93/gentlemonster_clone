@@ -7,8 +7,6 @@ import StoreDetail from './pages/store/StoreDetail';
 import ShopDetailContainer from './pages/shop/ShopDetailContainer';
 import CartConatiner from './pages/cart/CartConatiner';
 
-import CategoriesContainer from './containers/CategoriesContainer';
-
 import Header from './components/templates/Header';
 import Footer from './components/templates/Footer';
 class App extends Component {

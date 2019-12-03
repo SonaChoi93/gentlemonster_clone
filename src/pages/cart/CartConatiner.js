@@ -29,7 +29,11 @@ class CartConatiner extends Component {
           <CartComponent carts={carts} deleteCard={deleteCard} />
         ) : (
           <table className="cart_product_table">
-            <tr>카드에 담긴 제품이 없습니다.</tr>
+            <tbody>
+              <tr>
+                <td>카드에 담긴 제품이 없습니다.</td>
+              </tr>
+            </tbody>
           </table>
         )}
         {carts.length !== 0 && (

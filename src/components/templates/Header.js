@@ -68,27 +68,29 @@ class Header extends Component {
                 '카트에 담긴 제품이 없습니다'
               ) : (
                 <table>
-                  {carts.map(cart => (
-                    <tr key={cart.number}>
-                      <td style={{ height: '80px' }}>
-                        <img
-                          alt={cart.color.name}
-                          src={cart.color.image[0]}
-                          style={{ height: '60px' }}
-                        />
-                      </td>
-                      <td>
-                        <div>
-                          {cart.name} {cart.color.name}
-                        </div>
-                        <div>Qty : {cart.count}</div>
-                      </td>
-                      <td>{cart.price * cart.count} 원</td>
+                  <tbody>
+                    {carts.map(cart => (
+                      <tr key={cart.number}>
+                        <td style={{ height: '80px' }}>
+                          <img
+                            alt={cart.color.name}
+                            src={cart.color.image[0]}
+                            style={{ height: '60px' }}
+                          />
+                        </td>
+                        <td>
+                          <div>
+                            {cart.name} {cart.color.name}
+                          </div>
+                          <div>Qty : {cart.count}</div>
+                        </td>
+                        <td>{cart.price * cart.count} 원</td>
+                      </tr>
+                    ))}
+                    <tr>
+                      <td colSpan="3">소계</td>
                     </tr>
-                  ))}
-                  <tr>
-                    <td colSpa="3">소계</td>
-                  </tr>
+                  </tbody>
                 </table>
               )}
             </div>

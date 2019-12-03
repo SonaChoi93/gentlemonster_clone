@@ -329,7 +329,6 @@ const products = [
 class ShopDetailContainer extends Component {
   render() {
     const parse = this.props.location.search.substr(1).split('?');
-    console.log('parse', parse);
     const id = parse[0].split('=')[1];
     const item_color = parse[1].split('=')[1];
     let product = products.filter(product => product.id === parseInt(id))[0];
