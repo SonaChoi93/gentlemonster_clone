@@ -10,8 +10,8 @@ class Pages extends Component {
   render() {
     return (
       <div style={{ paddingTop: '80px' }}>
-        <Route path="/shop" exact component={ShopContainer} />
-        <Route path="/shop_detail" exact component={ShopDetailContainer} />
+        <Route path="/product/:product_id" exact component={ShopContainer} />
+        <Route path="/product_detail" exact component={ShopDetailContainer} />
         <Switch>
           <Route path="/store/:store_id" exact component={StoreDetail} />
           <Route path="/store" exact component={StoreContainer} />
