@@ -382,7 +382,7 @@ class ShopDetailContainer extends Component {
               <NavLink
                 key={idx}
                 to={
-                  `/shop_detail?product_id=` +
+                  `/product_detail?product_id=` +
                   product.id +
                   `?color_name=` +
                   color.name
