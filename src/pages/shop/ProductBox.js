@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class ColorCircle extends Component {
   render() {
     const { color, active, changeItem } = this.props;
     return (
       <div
-        className={`color_circle  ${active && "on"}`}
+        className={`color_circle  ${active && 'on'}`}
         onMouseOver={() => changeItem(color.name, color.image)}
       >
         <span
@@ -36,7 +36,7 @@ class ProductBox extends Component {
         <div className="product_image">
           <Link
             to={
-              `/shop_detail?product_id=` +
+              `/product_detail?product_id=` +
               product.id +
               `?color_name=` +
               current_color
@@ -65,7 +65,7 @@ class ProductBox extends Component {
               />
             ))}
           </div>
-          <div style={{ marginTop: "10px" }}>{product.price} 원</div>
+          <div style={{ marginTop: '10px' }}>{product.price} 원</div>
         </div>
       </div>
     );
